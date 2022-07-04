@@ -1,0 +1,70 @@
+<div>  
+    <div class="container">
+        <h1>User Sign Up Form</h1>
+        <form #userForm="ngForm" class="form">
+          {{ user | json }}
+          <br>
+          <mat-form-field  
+          appearance="fill" >
+            <mat-label>First Name</mat-label>
+            <input matInput type="text"
+                   required
+                   [(ngModel)]="user.firstname"
+                   name="firstname">
+          </mat-form-field>
+          <br>
+          <mat-form-field 
+          appearance="fill" >
+            <mat-label for="name">Last Name</mat-label>
+            <input matInput type="text"
+                   required
+                   [(ngModel)]="user.lastname" 
+                   name="lastname">
+          </mat-form-field>
+          <br>
+          <mat-form-field 
+          appearance="fill">
+            <mat-label >Username</mat-label>
+            <input matInput type="text"
+                   required
+                   [(ngModel)]="user.username" 
+                   name="username">
+          </mat-form-field>
+          <br>
+          <mat-form-field class="form-field"
+          appearance="fill">
+            <mat-label for="name">Email</mat-label>
+            <input matInput type="email" 
+                   required
+                   [(ngModel)]="user.email"
+                   name="email">
+          </mat-form-field>
+          <br>
+          <mat-form-field 
+          appearance="fill">
+            <mat-label for="name">Password</mat-label>
+            <input matInput 
+            type="password" 
+            class="form-control"
+            [type]="hide ? 'password' : 'text'"
+                   required
+                   [(ngModel)]="user.password"
+                   name="password">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field >
+          <br>
+          <mat-form-field 
+          appearance="fill">
+            <label for="name">DOB</label>
+            <input matInput type="date" 
+                   required
+                   [(ngModel)]="user.dateOfBirth"
+                   name="dateOfBirth">
+          </mat-form-field>
+          <br>  
+          <button mat-button type="submit">Submit</button>  
+        </form>
+    </div>     
+  </div>

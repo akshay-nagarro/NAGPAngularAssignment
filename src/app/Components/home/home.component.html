@@ -1,0 +1,16 @@
+
+<div >
+    <div align="left">
+        <button mat-button routerLink="/movielist">Movies</button>
+        <button mat-button routerLink="/tvshowslist">TV Shows</button>
+        <button margin-right="0px" mat-button [matMenuTriggerFor]="beforeMenu">
+            <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #beforeMenu="matMenu" xPosition="after" class="menuButton">  
+            <button mat-menu-item routerLink="/login">Login/Signup</button>   
+            <button mat-menu-item routerLink="/addMovieOrShow">Add Movies/TV shows</button>     
+            <button mat-menu-item >Signout</button>
+        </mat-menu>
+    </div>    
+</div>
+  

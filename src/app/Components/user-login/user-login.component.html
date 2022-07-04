@@ -1,0 +1,36 @@
+<div>  
+    <div class="container">
+        <h1>Log In</h1>
+        <form #userForm="ngForm" class="form">
+            <mat-form-field  appearance="fill">
+                <mat-label>Email</mat-label>
+                <input matInput type="email" required 
+                placeholder="Ex. email" 
+                value="abc@xyz.com"
+                [(ngModel)]="useremail"
+                name="username">
+              </mat-form-field>
+              <br>
+              <mat-form-field  appearance="fill">
+                <mat-label>Password</mat-label>
+                <input matInput type="password" required 
+                [type]="hide ? 'password' : 'text'"
+                placeholder="Ex. password" 
+                value=""
+                [(ngModel)]="password"
+                name="password">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+              </mat-form-field>
+              <br>
+          <button mat-button type="submit">Submit</button>  
+        </form>
+    </div>     
+    <div >
+        <h4>
+           New user 
+           <a [routerLink]="['/signup']">SignUp</a> 
+        </h4>
+    </div>
+  </div>

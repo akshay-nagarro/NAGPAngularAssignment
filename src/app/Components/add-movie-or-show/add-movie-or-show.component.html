@@ -1,0 +1,122 @@
+
+        <h1>Add movie Form</h1>
+        {{ismovie}}
+        {{isprimeexclusive}}
+        <br>
+        <br>
+        <form #userForm="ngForm"  class="form">
+          <br>
+
+          <mat-form-field  appearance="fill">
+            <mat-label>
+              Movie Or Show Name
+            </mat-label>
+            <input #name matInput type="text" 
+                   required
+                   [(ngModel)]="movieOrShow.movieOrShowName"
+                   name="name" maxlength="50">
+            <mat-hint align="end">{{name.value.length}} / 50</mat-hint>
+          </mat-form-field>
+
+          <br>
+
+          <mat-form-field  appearance="fill">
+            <mat-label>
+              Title
+            </mat-label>
+            <input matInput type="text" 
+                   required #title
+                   [(ngModel)]="movieOrShow.movieOrShowTitle" 
+                   name="title" maxlength="50">
+            <mat-hint align="end">{{title.value.length}} / 50</mat-hint>      
+          </mat-form-field>
+
+          <br>
+
+          <mat-form-field  appearance="fill">
+              <mat-label>
+                Description
+              </mat-label>
+              <textarea matInput type="text" 
+              [(ngModel)]="movieOrShow.movieOrShowDescription"
+              placeholder="Ex. Action Packed" #description
+              name="description" maxlength="400">
+              </textarea>   
+              <mat-hint align="end">{{description.value.length}} / 400</mat-hint>  
+          </mat-form-field>
+          <br>
+
+          <mat-form-field  appearance="fill">
+              <mat-label >
+                IMDB Rating
+              </mat-label>
+              <input matInput type="number" 
+                   required
+                   [(ngModel)]="movieOrShow.ratingIMDB" 
+                   name="rating" max="10" min="0">
+              <mat-hint align="end">0 - 10</mat-hint>                          
+          </mat-form-field>
+          <br>
+
+          <mat-form-field  appearance="fill">
+              <mat-label>
+                Language
+              </mat-label>
+              <mat-select [(ngModel)]="movieOrShow.language" name="language">
+                <mat-option *ngFor="let language of languages" [value]="language.value">
+                  {{language.viewvalue}}
+                </mat-option>
+              </mat-select>
+          </mat-form-field>
+          <br>
+            
+          <mat-form-field appearance="fill">
+              <mat-label>
+                Genre
+              </mat-label>
+              <mat-select [(ngModel)]="movieOrShow.genre" name="genre">
+                <mat-option *ngFor="let cat of categories" [value]="cat.value">
+                  {{cat.viewvalue}}
+                </mat-option>
+              </mat-select>
+              
+          </mat-form-field>
+          <br>
+
+          <mat-form-field  appearance="fill">
+              <mat-label>
+                Is Movie or TV show
+              </mat-label>              
+               <mat-select [(ngModel)]="ismovie" name="ismovie">
+                    <mat-option *ngFor="let cat of typeofshow" [value]="cat.value">
+                      {{cat.viewvalue}}
+                    </mat-option>
+              </mat-select>
+          </mat-form-field>
+          <br>
+
+          <mat-form-field  appearance="fill">
+              <mat-label>
+                Image Path
+              </mat-label>
+              <input matInput type="text" 
+                   required
+                   [(ngModel)]="movieOrShow.imagePath"
+                   name="imagepath">
+          </mat-form-field>
+          <br>
+
+          <mat-form-field appearance="fill">
+              <mat-label> 
+                Is Prime Exclusive
+              </mat-label>
+              <mat-select [(ngModel)]="isprimeexclusive" name="isprimeexclusive">
+                <mat-option *ngFor="let cat of truefalse" [value]="cat.value">
+                  {{cat.viewvalue}}
+                </mat-option>
+          </mat-select>
+          </mat-form-field> 
+          <br>
+
+          <button mat-button type="submit">Submit</button>  
+        </form>

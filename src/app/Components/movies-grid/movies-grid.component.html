@@ -1,0 +1,8 @@
+<mat-grid-list cols="4" rowHeight="1:1">
+    <ng-container *ngFor="let movie of movies">
+        <mat-grid-tile *ngIf="movie?.isMovie">
+            <app-movies [movie]="movie">    
+            </app-movies>
+        </mat-grid-tile>
+    </ng-container>
+</mat-grid-list>
