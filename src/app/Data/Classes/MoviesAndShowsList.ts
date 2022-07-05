@@ -13,7 +13,7 @@ export class MoviesAndShowsList {
               movieOrShowDescription: "Description movie 1",    
               ratingIMDB: 1,    
               language: "Hindi",    
-              genre: "",    
+              genre: "Action",    
               isMovie: true,    
               imagePath: "../Images/300-rise-of-an-empire.jpg",    
               isPrimeShow: false
@@ -25,7 +25,7 @@ export class MoviesAndShowsList {
               movieOrShowDescription: "Description TV show 1",    
               ratingIMDB: 1,    
               language: "Hindi",    
-              genre: "",    
+              genre: "Action",    
               isMovie: false,    
               imagePath: "https://drive.google.com/file/d/18mg-pr3Uq1zJGv2OZX6YwFn8pc6FuFqV/view",    
               isPrimeShow: false
@@ -37,7 +37,7 @@ export class MoviesAndShowsList {
                 movieOrShowDescription: "Description movie 2",    
                 ratingIMDB: 1,    
                 language: "Hindi",    
-                genre: "",    
+                genre: "Action",    
                 isMovie: true,    
                 imagePath: "file:///../Images/American-Horror-Story.jpg",    
                 isPrimeShow: false
@@ -49,7 +49,7 @@ export class MoviesAndShowsList {
                 movieOrShowDescription: "Description movie 3",    
                 ratingIMDB: 1,    
                 language: "Hindi",    
-                genre: "",    
+                genre: "Action",    
                 isMovie: true,    
                 imagePath: "https://drive.google.com/uc?export=view&id=18mg-pr3Uq1zJGv2OZX6YwFn8pc6FuFqV",    
                 isPrimeShow: false

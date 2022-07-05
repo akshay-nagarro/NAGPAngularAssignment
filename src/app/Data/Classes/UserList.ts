@@ -2,10 +2,10 @@ import { Iuser } from "../Interfaces/Iuser";
 
 export class UserList 
 {
-    userList : Iuser[];
-    constructor()
-    {
-        this.userList = [
+    public static userList : Iuser[];
+
+    private static _initialize = (() => {
+        UserList.userList = [
             {
                 userid: 1,
                 firstname: "Akshay",
@@ -58,6 +58,10 @@ export class UserList
                 watched:"",
                 isAdmin:false       
             }
-        ]
+        ];
+    })();
+    constructor()
+    {
+        
     }
 }

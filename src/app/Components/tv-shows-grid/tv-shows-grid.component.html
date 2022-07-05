@@ -1,4 +1,4 @@
-<mat-grid-list cols="4" rowHeight="1:1">
+<mat-grid-list cols="4" rowHeight="400px"  fxLayout="row" fxLayoutAlign=" none">
     <ng-container *ngFor="let show of shows">
         <mat-grid-tile *ngIf="!show?.isMovie">
             <app-tvshows [show]="show">    

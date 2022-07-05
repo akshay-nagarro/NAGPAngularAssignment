@@ -37,13 +37,14 @@ export class AddMovieOrShowComponent implements OnInit {
     imagePath:"",
     isPrimeShow:false
   };
+
   onSubmit(){
     this.submitted = true;
     let len= MoviesAndShowsList.showslist?.length;
     this.movieOrShow.movieOrShowId = (len == undefined)?0:len+1;
     this.movieOrShow.isMovie= (this.ismovie=="Movie")?true:false;
     this.movieOrShow.isPrimeShow = (this.isprimeexclusive=="True")?true:false;
-    this.listofshows[this.movieOrShow.movieOrShowId]=this.movieOrShow;
+    this.listofshows[this.movieOrShow.movieOrShowId-1]=this.movieOrShow;
     MoviesAndShowsList.setLocalStorage(this.listofshows);
   }
 
