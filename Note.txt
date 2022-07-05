@@ -1,0 +1,4 @@
+Git Link: https://github.com/akshay-nagarro/NAGPAngularAssignment.git
+Link to hosted (in progress): https://trieal.azurewebsites.net/
+
+Zip might be outdated please refer to git link for latest updates
