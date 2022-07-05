@@ -15,6 +15,8 @@ import { IMovieOrShow } from 'src/app/Data/Interfaces/IMovieOrShow';
 export class AddMovieOrShowComponent implements OnInit {
 
 
+  listofshows : any;
+  
   ismovie = "";
   isprimeexclusive = "";
   public typeofshow = TypeOfShow.typeofshow;
@@ -41,10 +43,7 @@ export class AddMovieOrShowComponent implements OnInit {
     this.movieOrShow.movieOrShowId = (len == undefined)?0:len+1;
     this.movieOrShow.isMovie= (this.ismovie=="Movie")?true:false;
     this.movieOrShow.isPrimeShow = (this.isprimeexclusive=="True")?true:false;
-    if(!MoviesAndShowsList==undefined && !this.movieOrShow == undefined && !MoviesAndShowsList.showslist== undefined)
-    {
-      //MoviesAndShowsList.showslist[this.movieOrShow.movieOrShowId]=this.movieOrShow;
-    }  
+    this.listofshows[this.movieOrShow.movieOrShowId]=this.movieOrShow;    
   }
 
   constructor() {    
@@ -59,6 +58,7 @@ export class AddMovieOrShowComponent implements OnInit {
   }
 
   ngOnInit(): void {    
+    this.listofshows = MoviesAndShowsList.showslist;
   }
 
 }

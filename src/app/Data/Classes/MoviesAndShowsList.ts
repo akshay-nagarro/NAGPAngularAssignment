@@ -15,7 +15,7 @@ export class MoviesAndShowsList {
               language: "Hindi",    
               genre: "",    
               isMovie: true,    
-              imagePath: "https://material.angular.io/assets/img/examples/shiba2.jpg",    
+              imagePath: "D://NAGP/Watch4Fun/src/app/Data/Images/Akira.jpg",    
               isPrimeShow: false
             },
             {
