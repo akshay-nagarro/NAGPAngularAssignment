@@ -13,7 +13,15 @@ export class LoginServiceService {
     UserList.userList.forEach(element => {
       if(element.email==email && element.password== passowrd)
       {
-        this.isVaildUser=true;        
+        this.isVaildUser=true;      
+        if(element.isAdmin==true)
+        {
+          localStorage.setItem("isAdmin","true");
+        }  
+        else
+        {
+          localStorage.setItem("isAdmin","false");
+        }
       }  
     });
     

@@ -10,9 +10,16 @@
             <mat-icon>more_vert</mat-icon>
         </button>
         <mat-menu #beforeMenu="matMenu" xPosition="after" >  
-            <button mat-menu-item routerLink="/login">Login/Signup</button>   
+            <button mat-menu-item routerLink="/login"
+            *ngIf="!isuserloggedin">
+                Login/Signup
+            </button>   
             <button mat-menu-item routerLink="/addMovieOrShow">Add Movies/TV shows</button>     
-            <button mat-menu-item >Signout</button>
+            <button mat-menu-item 
+            (click)="signout()"
+            >
+            Signout
+        </button>
         </mat-menu>
     </div>    
 </div>

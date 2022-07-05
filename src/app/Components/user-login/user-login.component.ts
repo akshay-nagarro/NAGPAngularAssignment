@@ -3,6 +3,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatLabel } from '@angular/material/form-field';
 import { LoginServiceService } from 'src/app/Services/login-service.service';
 import { FormControl, Validators } from '@angular/forms';
+import { HomeComponent } from '../home/home.component';
 
 @Component({
   selector: 'app-user-login',
@@ -23,6 +24,15 @@ export class UserLoginComponent implements OnInit {
   onSubmit(){
     this.submitted = true;
     this.loginstatus= LoginServiceService.login(this.useremail,this.password);
+    if(this.loginstatus)
+    {
+    localStorage.setItem("isUserLoggedIn","true");
+    }
+    else
+    {
+      //login not success
+    }
+
 
   }
   ngOnInit(): void {

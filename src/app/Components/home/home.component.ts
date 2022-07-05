@@ -9,9 +9,19 @@ import { MoviesAndShowsList } from 'src/app/Data/Classes/MoviesAndShowsList';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  isuserloggedin= false;
+
+  signout(): void {
+    localStorage.setItem("isUserLoggedIn","false");
+    this.ngOnInit();
+  }
+
+  constructor() {
+
+   }
 
   ngOnInit(): void {
+    this.isuserloggedin = (localStorage.getItem("isUserLoggedIn"))=="true"?true:false;
   }
 
 }
