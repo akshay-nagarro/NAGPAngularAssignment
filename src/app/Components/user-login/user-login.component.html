@@ -1,8 +1,13 @@
+<div class="content-background">
 <div>  
-    <div class="container">
-        <h1>Log In</h1>
+    <div class="container" >
+      <br>
+      <br>
+        <h2 class="login-heading">
+          Log In
+        </h2>
         <form #userForm="ngForm" class="form">
-            <mat-form-field  appearance="fill">
+            <mat-form-field  appearance="outline">
                 <mat-label>Email</mat-label>
                 <input matInput type="email" required 
                 placeholder="Ex. email" 
@@ -11,7 +16,7 @@
                 name="username">
               </mat-form-field>
               <br>
-              <mat-form-field  appearance="fill">
+              <mat-form-field  appearance="outline">
                 <mat-label>Password</mat-label>
                 <input matInput type="password" required 
                 [type]="hide ? 'password' : 'text'"
@@ -24,13 +29,19 @@
                 </button>
               </mat-form-field>
               <br>
-          <button mat-button type="submit">Submit</button>  
+          <button mat-button type="submit"
+          class="submit-button">
+            Submit
+          </button>  
         </form>
-    </div>     
-    <div >
+    </div> 
+    <br>    
+    <div class="new-user">
         <h4>
-           New user 
-           <a [routerLink]="['/signup']">SignUp</a> 
+           <b>New User 
+           <a [routerLink]="['/signup']"> SignUp</a> 
+          </b>
         </h4>
     </div>
-  </div>
+</div>
+</div>

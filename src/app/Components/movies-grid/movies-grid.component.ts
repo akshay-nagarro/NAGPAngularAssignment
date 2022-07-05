@@ -15,7 +15,7 @@ export class MoviesGridComponent implements OnInit {
   
 
   ngOnInit(): void {
-    this.movies = MoviesAndShowsList.showslist;
+    this.movies = MoviesAndShowsList.getMoviesListFromLocalStorage();
   }
 
 }

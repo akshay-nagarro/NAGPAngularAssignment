@@ -15,7 +15,7 @@ export class MoviesAndShowsList {
               language: "Hindi",    
               genre: "",    
               isMovie: true,    
-              imagePath: "D://NAGP/Watch4Fun/src/app/Data/Images/Akira.jpg",    
+              imagePath: "../Images/300-rise-of-an-empire.jpg",    
               isPrimeShow: false
             },
             {
@@ -27,7 +27,7 @@ export class MoviesAndShowsList {
               language: "Hindi",    
               genre: "",    
               isMovie: false,    
-              imagePath: "https://material.angular.io/assets/img/examples/shiba2.jpg",    
+              imagePath: "https://drive.google.com/file/d/18mg-pr3Uq1zJGv2OZX6YwFn8pc6FuFqV/view",    
               isPrimeShow: false
             },
             {
@@ -39,7 +39,7 @@ export class MoviesAndShowsList {
                 language: "Hindi",    
                 genre: "",    
                 isMovie: true,    
-                imagePath: "https://material.angular.io/assets/img/examples/shiba2.jpg",    
+                imagePath: "file:///../Images/American-Horror-Story.jpg",    
                 isPrimeShow: false
               },
               {
@@ -51,20 +51,26 @@ export class MoviesAndShowsList {
                 language: "Hindi",    
                 genre: "",    
                 isMovie: true,    
-                imagePath: "https://material.angular.io/assets/img/examples/shiba2.jpg",    
+                imagePath: "https://drive.google.com/uc?export=view&id=18mg-pr3Uq1zJGv2OZX6YwFn8pc6FuFqV",    
                 isPrimeShow: false
               },
           ]  ;
           
-        MoviesAndShowsList.setLocalStorage();
+        MoviesAndShowsList.setLocalStorage(MoviesAndShowsList.showslist);
     })();
 
     constructor()
     {            
     }
 
-    public static setLocalStorage()  {
-        localStorage.setItem('moviesAndShowsList', JSON.stringify(MoviesAndShowsList.showslist));
+    public static getMoviesListFromLocalStorage() {
+      return MoviesAndShowsList.showslist;
+    }
+
+    public static setLocalStorage(list: IMovieOrShow[])  {      
+      localStorage.removeItem("moviesAndShowsList");
+        localStorage.setItem('moviesAndShowsList', JSON.stringify(list));
+        MoviesAndShowsList.showslist=list;
     }
 
 }

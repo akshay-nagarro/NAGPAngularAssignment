@@ -43,19 +43,13 @@ export class AddMovieOrShowComponent implements OnInit {
     this.movieOrShow.movieOrShowId = (len == undefined)?0:len+1;
     this.movieOrShow.isMovie= (this.ismovie=="Movie")?true:false;
     this.movieOrShow.isPrimeShow = (this.isprimeexclusive=="True")?true:false;
-    this.listofshows[this.movieOrShow.movieOrShowId]=this.movieOrShow;    
+    this.listofshows[this.movieOrShow.movieOrShowId]=this.movieOrShow;
+    MoviesAndShowsList.setLocalStorage(this.listofshows);
   }
 
   constructor() {    
    }
 
-
-  getErrorMessage() {
-    if (this.email.hasError('required')) {
-      return 'You must enter a value';
-    }
-    return this.email.hasError('email') ? 'Not a valid email' : '';
-  }
 
   ngOnInit(): void {    
     this.listofshows = MoviesAndShowsList.showslist;

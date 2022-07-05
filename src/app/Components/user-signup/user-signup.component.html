@@ -1,6 +1,10 @@
-<div>  
+<div class="content-background">  
     <div class="container">
-        <h1>User Sign Up Form</h1>
+      <br>
+      <br>
+        <h2 class="heading">
+          User Sign Up Form
+        </h2>
         <form #userForm="ngForm" class="form">
           {{ user | json }}
           <br>
@@ -12,7 +16,7 @@
                    [(ngModel)]="user.firstname"
                    name="firstname">
           </mat-form-field>
-          <br>
+          
           <mat-form-field 
           appearance="fill" >
             <mat-label for="name">Last Name</mat-label>
@@ -21,7 +25,7 @@
                    [(ngModel)]="user.lastname" 
                    name="lastname">
           </mat-form-field>
-          <br>
+         
           <mat-form-field 
           appearance="fill">
             <mat-label >Username</mat-label>
@@ -30,7 +34,7 @@
                    [(ngModel)]="user.username" 
                    name="username">
           </mat-form-field>
-          <br>
+          
           <mat-form-field class="form-field"
           appearance="fill">
             <mat-label for="name">Email</mat-label>
@@ -39,7 +43,7 @@
                    [(ngModel)]="user.email"
                    name="email">
           </mat-form-field>
-          <br>
+          
           <mat-form-field 
           appearance="fill">
             <mat-label for="name">Password</mat-label>
@@ -54,7 +58,7 @@
                     <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
             </button>
           </mat-form-field >
-          <br>
+          
           <mat-form-field 
           appearance="fill">
             <label for="name">DOB</label>
@@ -64,7 +68,12 @@
                    name="dateOfBirth">
           </mat-form-field>
           <br>  
-          <button mat-button type="submit">Submit</button>  
+          <button mat-button type="submit"
+          class="submit-button">
+          Submit
+        </button>  
         </form>
+        <br>
+        <br>
     </div>     
   </div>

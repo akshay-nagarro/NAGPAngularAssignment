@@ -13,7 +13,7 @@ export class TvShowsGridComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.shows = MoviesAndShowsList.showslist;
+    this.shows = MoviesAndShowsList.getMoviesListFromLocalStorage();;
   }
 
 }
