@@ -51,4 +51,4 @@ jobs:
         with:
           app-name: 'Trieal'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D3B4A550AAD741DCBF0F035191F4CB9D }}
-          package: ./dist/Trieal
+          package: ./dist/watch4-fun
